@@ -43,7 +43,7 @@ const UpcomingEvents = ({events, updateEvents}) => {
     return(
         <>
                 <Box p="20px">
-                        <Typography variant = "h5">Yaklaşan Aktivite</Typography>
+                        <Typography variant = "h5">Yaklaşan Hatırlatmalar</Typography>
                     <Box display = "flex" flexWrap = "wrap">
                         {events.map((event) => (
                             <Card style={{ marginTop: "10px", marginRight: "5px",padding: "10px"}} key={event.id}>
