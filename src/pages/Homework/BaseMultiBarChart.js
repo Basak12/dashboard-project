@@ -27,16 +27,8 @@ const MultiBarChart = () => {
 
     const series = [
         {
-            name: "9/A",
-            data: [22, 12, 24]
-        },
-        {
             name: "9/B",
             data: [24, 8, 23]
-        },
-        {
-            name: "9/C",
-            data: [21, 9, 22]
         }
     ];
 

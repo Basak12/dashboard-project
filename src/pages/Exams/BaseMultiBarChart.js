@@ -6,15 +6,15 @@ const MultiBarChartForExam = () => {
         series: [
             {
                 name: '1. Sınav',
-                data: [44, 55, 65],
+                data: [44],
             },
             {
                 name: '2. Sınav',
-                data: [70, 58, 64],
+                data: [70],
             },
             {
                 name: '3. Sınav',
-                data: [33, 67, 51],
+                data: [33],
             },
         ],
         options: {
@@ -27,7 +27,7 @@ const MultiBarChartForExam = () => {
             },
             chart: {
                 type: 'bar',
-                height: 200,
+                height: 40,
                 stacked: true,
             },
             plotOptions: {
@@ -38,13 +38,6 @@ const MultiBarChartForExam = () => {
             },
             dataLabels: {
                 enabled: true,
-            },
-            xaxis: {
-                categories: [
-                    '9/A',
-                    '9/B',
-                    '9/C',
-                ],
             },
             legend: {
                 position: 'bottom',

@@ -26,17 +26,7 @@ const TabsForClass = () => {
     const items = [
         {
             id: 1,
-            label: "9/A Sınav Notları",
-            content: <TabTableForExam rows={rows}/>,
-        },
-        {
-            id: 2,
             label: "9/B Sınav Notları",
-            content: <TabTableForExam rows={rows}/>,
-        },
-        {
-            id: 3,
-            label: "9/C Sınav Notları",
             content: <TabTableForExam rows={rows}/>,
         },
     ];

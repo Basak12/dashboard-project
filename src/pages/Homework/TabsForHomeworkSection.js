@@ -28,17 +28,7 @@ const TabsForHomework = () => {
     const items = [
         {
             id: 1,
-            label: "9/A Ödev Durumu",
-            content: <TabTableForHomework rows={rows}/>,
-        },
-        {
-            id: 2,
             label: "9/B Ödev Durumu",
-            content: <TabTableForHomework rows={rows}/>,
-        },
-        {
-            id: 3,
-            label: "9/C Ödev Durumu",
             content: <TabTableForHomework rows={rows}/>,
         },
     ];

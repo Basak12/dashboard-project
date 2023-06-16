@@ -10,27 +10,27 @@ const ClassList = ({students, studentNumbers}) => {
             display: "flex",
             justifyContent: "space-between",
         }}>
-                <Box diplay= "flex" flexDirection = "row" justifyContent = "space-betwen">
-                    <Typography
-                        variant="subtitle1"
-                        style = {{
-                            color: "#0000008a"
-                        }}
-                    >
-                        Öğrenciler
-                    </Typography>
-                    <Typography
-                        display ="flex"
-                        flexDirection = "column"
-                        variant="subtitle1"
-                    >
-                        {students.map((student, index) => {
-                            return(
-                                <span key={index}>{index + 1}) {student} </span>
-                            )},)}
-                    </Typography>
-                </Box>
-            <Box>
+            <Box diplay= "flex" flexDirection = "row" justifyContent = "space-betwen">
+                <Typography
+                    variant="subtitle1"
+                    style = {{
+                        color: "#0000008a"
+                    }}
+                >
+                    Öğrenciler
+                </Typography>
+                <Typography
+                    display ="flex"
+                    flexDirection = "column"
+                    variant="subtitle1"
+                >
+                    {students.map((student, index) => {
+                        return(
+                            <span key={index}>{index + 1}) {student} </span>
+                        )},)}
+                </Typography>
+            </Box>
+            <Box display = "flex" flexDirection = "column" alignItems = "center">
                 <Typography
                     variant="subtitle1"
                     style = {{

@@ -12,8 +12,23 @@ const ClassInformationCard = () => {
             setExpandedIndex(nextIndex)
         }
     };
-
     const data = [
+        {
+            name: "9/B",
+            participants: "23 Kişi",
+            teacher: "Burcu Fidan",
+            schedule: "Çarşamba 15:40-17:30",
+            students: ["Burak Tekin", "Ceren Özçelik", "Deniz Türker"],
+            studentNumbers: ["257", "323", "255", "536"],
+        },
+        {
+            name: "10/B",
+            participants: "23 Kişi",
+            teacher: "Bengü Yılmaz",
+            schedule: "Çarşamba 9:40-12:30",
+            students: ["Başak Kocakaya", "Arda Tekin", "Atadervim Altun", "Deniz Küçükkara"],
+            studentNumbers: ["237", "329", "215", "546"],
+        },
         {
             name: "12/A",
             participants: "24 Kişi",
@@ -39,14 +54,7 @@ const ClassInformationCard = () => {
             students: ["Ege Germen", "Tuna Germen", "Deniz Ender"],
             studentNumbers: ["952", "835", "345"],
         },
-        {
-            name: "10/B",
-            participants: "23 Kişi",
-            teacher: "Burcu Fidan",
-            schedule: "Çarşamba 9:40-12:30",
-            students: ["Başak Kocakaya", "Arda Tekin", "Atadervim Altun", "Deniz Küçükkara"],
-            studentNumbers: ["237", "329", "215", "546"],
-        }]
+    ]
 
     const renderedItems = data.map((item, index) => {
         const isExpanded = index === expandedIndex;
