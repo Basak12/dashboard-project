@@ -1,7 +1,6 @@
 import React, {useState} from "react";
-import {Box, Typography, Card, Avatar, FormGroup, FormControlLabel, Checkbox, Button} from "@mui/material";
-import AddNewActivity from "../AddNewActivity";
-
+import {Box, Typography, Card, Avatar, FormGroup, FormControlLabel, Checkbox, Button, IconButton} from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 const UpcomingEvents = ({events, updateEvents}) => {
     const handleCheckboxChange = async (event, eventId) => {
         const updatedEvents = events.map((event) => {
@@ -18,6 +17,34 @@ const UpcomingEvents = ({events, updateEvents}) => {
             console.log(error.message);
         }
     };
+
+    const deleteEventFromDatabase = async (eventId) => {
+        try {
+            const response = await fetch(
+                `https://reat-http-post-default-rtdb.firebaseio.com/movies/${eventId}.json`,
+                {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error('Something went wrong!');
+            }
+        } catch (error) {
+            throw new Error('Something went wrong!');
+        }
+    };
+
+    const handleRemoveEvent = async (eventId) => {
+            await deleteEventFromDatabase(eventId);
+        const updatedEvents = events.filter((event) => event.id !== eventId);
+        updateEvents(updatedEvents);
+    };
+
+
     const updateEventStatusInDatabase = async (eventId, status) => {
         try {
             const response = await fetch(
@@ -47,27 +74,19 @@ const UpcomingEvents = ({events, updateEvents}) => {
                     <Box display = "flex" flexWrap = "wrap">
                         {events.map((event) => (
                             <Card style={{ marginTop: "10px", marginRight: "5px",padding: "10px"}} key={event.id}>
-                                <Box
-                                    pb={2}
-                                    display="flex"
-                                    alignItems="center"
-                                    justifyContent="space-between"
-                                >
-                                    <Box>
-                                        <Typography
-                                            gutterBottom
-                                            component="div"
-                                            variant="caption"
-                                        >
-                                            Bilişim Teknolojileri
-                                        </Typography>
-                                        <Typography
-                                            variant="h6"
-                                        >
-                                            {event.openingText}
-                                        </Typography>
-                                    </Box>
+                                <Box display = 'flex' justifyContent = 'space-between' alignItems = 'center'>
+                                 <Typography
+                                     variant="caption"
+                                 >
+                                     Bilişim Teknolojileri
+                                 </Typography>
+                                    <IconButton size="small" onClick={() => handleRemoveEvent(event.id)}>
+                                        <CloseIcon/>
+                                    </IconButton>
                                 </Box>
+                                <Typography variant="h6">
+                                    {event.openingText}
+                                </Typography>
                                 <Box display="flex" alignItems="center" justifyContent="space-between">
                                     <Box  display="flex"
                                           flexDirection="row">
