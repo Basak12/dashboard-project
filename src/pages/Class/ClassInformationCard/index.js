@@ -166,7 +166,7 @@ const ClassInformationCard = () => {
            <Box>
                <Box p="20px">
                    <Typography variant = "h5">Sınıf Bilgileri</Typography>
-                   <Box display = "flex">
+                   <Box display = "flex" flexWrap = 'wrap'>
                        {renderedItems}
                    </Box>
                </Box>
