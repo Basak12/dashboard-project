@@ -25,6 +25,9 @@ const MultiBarChartForExam = () => {
                     fontWeight: 'strong',
                 }
             },
+            xaxis: {
+                categories: ["9/B"]
+            },
             chart: {
                 type: 'bar',
                 height: 40,

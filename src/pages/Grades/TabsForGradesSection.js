@@ -19,11 +19,11 @@ const TabsForHomework = () => {
         return { name, number, examAverage, isHomeworkDone, isActivelyParticipated };
     }
     const rows = [
-        createData('Baran Demirtaş', 940, 78, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>),
-        createData('Başak Kocakaya', 237, 66, <CloseIcon color = 'error'/>, <CloseIcon color = 'error'/>),
-        createData('Beyza Güler', 262, 82, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>),
-        createData('Ekin Öztürk', 305, 75, <CloseIcon color = 'error'/>, <CloseIcon color = 'error'/>),
-        createData('Nehir Ada Öztürk', 356, 80, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>),
+        createData('Baran Demirtaş', 940, 78, <CheckIcon color = 'success'/>, <Typography color = 'success'> 60%</Typography>),
+        createData('Başak Kocakaya', 237, 66, <CloseIcon color = 'error'/>, <Typography color= 'error'> 20%</Typography>),
+        createData('Beyza Güler', 262, 82, <CheckIcon color = 'success'/>,  <Typography color= 'error'> 30%</Typography>),
+        createData('Ekin Öztürk', 305, 75, <CloseIcon color = 'error'/>,  <Typography color= 'success'> 75%</Typography>),
+        createData('Nehir Ada Öztürk', 356, 80, <CheckIcon color = 'success'/>,  <Typography color= 'success' > 80%</Typography>),
     ];
     const items = [
         {
