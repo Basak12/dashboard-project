@@ -19,11 +19,11 @@ const TabsForHomework = () => {
         return { name, number, firstHomework, secondHomework, thirdHomework };
     }
     const rows = [
-        createData('Baran Demirtaş', 940, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>),
-        createData('Başak Kocakaya', 237, <CheckIcon color = 'success'/>, <CloseIcon color = 'error'/>, <CloseIcon color = 'error'/>),
-        createData('Beyza Güler', 262, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>),
-        createData('Ekin Öztürk', 305, <CheckIcon color = 'success'/>, <CloseIcon color = 'error'/>, <CloseIcon color = 'error'/>),
-        createData('Nehir Ada Öztürk', 356, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>),
+        createData('Öğrenci 1', 940, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>),
+        createData('Öğrenci 2', 237, <CheckIcon color = 'success'/>, <CloseIcon color = 'error'/>, <CloseIcon color = 'error'/>),
+        createData('Öğrenci 3', 262, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>),
+        createData('Öğrenci 4', 305, <CheckIcon color = 'success'/>, <CloseIcon color = 'error'/>, <CloseIcon color = 'error'/>),
+        createData('Öğrenci 5', 356, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>, <CheckIcon color = 'success'/>),
     ];
     const items = [
         {

@@ -18,15 +18,15 @@ const ClassInformationCard = () => {
             participants: "23 Kişi",
             teacher: "Burcu Fidan",
             schedule: "Çarşamba 15:40-17:30",
-            students: ["Burak Tekin", "Ceren Özçelik", "Deniz Türker"],
-            studentNumbers: ["257", "323", "255", "536"],
+            students: ["Öğrenci 1", "Öğrenci 2", "Öğrenci 3"],
+            studentNumbers: ["257", "323", "255"],
         },
         {
             name: "10/B",
             participants: "23 Kişi",
             teacher: "Bengü Yılmaz",
             schedule: "Çarşamba 9:40-12:30",
-            students: ["Başak Kocakaya", "Arda Tekin", "Atadervim Altun", "Deniz Küçükkara"],
+            students: ["Öğrenci 1", "Öğrenci 2", "Öğrenci 3", "Öğrenci 4"],
             studentNumbers: ["237", "329", "215", "546"],
         },
         {
@@ -34,7 +34,7 @@ const ClassInformationCard = () => {
             participants: "24 Kişi",
             teacher: "Melih Çelik",
             schedule: "Pazartesi 10:40-12:30",
-            students: ["Baran Demirtaş", "Merve Şahin", "Beyza Güler"],
+            students: ["Öğrenci 1", "Öğrenci 2", "Öğrenci 3"],
             studentNumbers: ["940", "237", "262"],
 
         },
@@ -43,7 +43,7 @@ const ClassInformationCard = () => {
             participants: "28 Kişi",
             teacher: "Duygu Sönmez",
             schedule: "Cuma 10:40-12:30",
-            students: ["Ceren Özgün", "Ekin Öztürk", "Sarp Okay", "Sümeyra Ahi"],
+            students: ["Öğrenci 1", "Öğrenci 2", "Öğrenci 3", "Öğrenci 4"],
             studentNumbers: ["547", "305", "468", "587"],
         },
         {
@@ -51,7 +51,7 @@ const ClassInformationCard = () => {
             participants: "23 Kişi",
             teacher: "Burcu Fidan",
             schedule: "Salı 13:40-15:30",
-            students: ["Ege Germen", "Tuna Germen", "Deniz Ender"],
+            students: ["Öğrenci 1", "Öğrenci 2", "Öğrenci 3"],
             studentNumbers: ["952", "835", "345"],
         },
     ]

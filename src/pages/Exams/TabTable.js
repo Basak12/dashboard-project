@@ -12,11 +12,11 @@ function createData(name, number, firstExamGrade, secondExamGrade, thirdExamGrad
 }
 
 const rows = [
-    createData('Baran Demirtaş', 159, 6.0, 24, 4.0),
-    createData('Başak Kocakaya', 237, 9.0, 37, 4.3),
-    createData('Beyza Güler', 262, 16.0, 24, 6.0),
-    createData('Ekin Öztürk', 305, 3.7, 67, 4.3),
-    createData('Nehir Ada Öztürk', 356, 16.0, 49, 3.9),
+    createData('Öğrenci 1', 159, 6.0, 24, 4.0),
+    createData('Öğrenci 2', 237, 9.0, 37, 4.3),
+    createData('Öğrenci 3', 262, 16.0, 24, 6.0),
+    createData('Öğrenci 4', 305, 3.7, 67, 4.3),
+    createData('Öğrenci 5', 356, 16.0, 49, 3.9),
 ];
 
 export default function TabTableForExam({rows}) {

@@ -21,7 +21,7 @@ const UpcomingEvents = ({events, updateEvents}) => {
     const deleteEventFromDatabase = async (eventId) => {
         try {
             const response = await fetch(
-                `https://reat-http-post-default-rtdb.firebaseio.com/movies/${eventId}.json`,
+                `https://reat-http-post-default-rtdb.firebaseio.com/activities/${eventId}.json`,
                 {
                     method: 'DELETE',
                     headers: {
@@ -29,7 +29,6 @@ const UpcomingEvents = ({events, updateEvents}) => {
                     },
                 }
             );
-
             if (!response.ok) {
                 throw new Error('Something went wrong!');
             }
@@ -48,7 +47,7 @@ const UpcomingEvents = ({events, updateEvents}) => {
     const updateEventStatusInDatabase = async (eventId, status) => {
         try {
             const response = await fetch(
-                `https://reat-http-post-default-rtdb.firebaseio.com/movies/${eventId}.json`,
+                `https://reat-http-post-default-rtdb.firebaseio.com/activities/${eventId}.json`,
                 {
                     method: 'PATCH',
                     headers: {
@@ -69,7 +68,7 @@ const UpcomingEvents = ({events, updateEvents}) => {
 
     return(
         <>
-                <Box p="20px">
+                <Box px="10px" py = "20px">
                         <Typography variant = "h5">Yaklaşan Hatırlatmalar</Typography>
                     <Box display = "flex" flexWrap = "wrap">
                         {events.map((event) => (
@@ -85,7 +84,7 @@ const UpcomingEvents = ({events, updateEvents}) => {
                                     </IconButton>
                                 </Box>
                                 <Typography variant="h6">
-                                    {event.openingText}
+                                    {event.activity}
                                 </Typography>
                                 <Box display="flex" alignItems="center" justifyContent="space-between">
                                     <Box  display="flex"
@@ -98,9 +97,9 @@ const UpcomingEvents = ({events, updateEvents}) => {
                                         <Typography
                                             variant="subtitle1"
                                             style={{marginLeft: "5px"}}
-                                            color = {event.releaseDate === 1 ? "red" : "green"}
+                                            color = {event.deadline === 1 ? "red" : "green"}
                                         >
-                                            <span>{event.releaseDate} gün </span>
+                                            <span>{event.deadline} gün </span>
                                         </Typography>
                                     </Box>
                                     <FormGroup sx={{p:1}}>

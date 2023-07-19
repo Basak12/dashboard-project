@@ -17,11 +17,11 @@ const TabsForClass = () => {
         return { name, number, firstExamGrade, secondExamGrade, thirdExamGrade };
     }
     const rows = [
-        createData('Baran Demirtaş', 940, 59, 24, 70),
-        createData('Başak Kocakaya', 237, 100, 70, 98),
-        createData('Beyza Güler', 262, 60, 42, 60),
-        createData('Ekin Öztürk', 305, 73, 67, 43),
-        createData('Nehir Ada Öztürk', 356, 57, 49, 39),
+        createData('Öğrenci 1', 940, 59, 24, 70),
+        createData('Öğrenci 2', 237, 100, 70, 98),
+        createData('Öğrenci 3', 262, 60, 42, 60),
+        createData('Öğrenci 4', 305, 73, 67, 43),
+        createData('Öğrenci 5', 356, 57, 49, 39),
     ];
     const items = [
         {

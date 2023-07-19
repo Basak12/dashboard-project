@@ -16,7 +16,7 @@ const Dashboard = () => {
     async function fetchEventsHandler(){
         try {
             const response = await fetch(
-                "https://reat-http-post-default-rtdb.firebaseio.com/movies.json"
+                "https://reat-http-post-default-rtdb.firebaseio.com/activities.json"
             );
             const data = await response.json();
             const loadedEvents = [];
@@ -24,8 +24,8 @@ const Dashboard = () => {
                 loadedEvents.push({
                     id: key,
                     status: data[key].status,
-                    openingText: data[key].openingText,
-                    releaseDate: data[key].releaseDate,
+                    activity: data[key].activity,
+                    deadline: data[key].deadline,
                 });
             }
             setEvents(loadedEvents);
@@ -40,7 +40,7 @@ const Dashboard = () => {
 
     async function addEventHandler(newEvent) {
         const response = await fetch(
-            "https://reat-http-post-default-rtdb.firebaseio.com/movies.json",
+            "https://reat-http-post-default-rtdb.firebaseio.com/activities.json",
             {
                 method: "POST",
                 body: JSON.stringify(newEvent),
@@ -52,8 +52,8 @@ const Dashboard = () => {
   return(
     <>
         <Box display = "flex" flexDirection="column">
-                <UpcomingEvents events={events} updateEvents={updateEvents} />
-                <AddNewActivity open = {open} setOpen = {setOpen} onAddNewActivity={addEventHandler}/>
+            <UpcomingEvents events={events} updateEvents={updateEvents} />
+            <AddNewActivity open = {open} setOpen = {setOpen} onAddNewActivity={addEventHandler}/>
             <SuccessRatePieChart/>
         </Box>
 

@@ -7,12 +7,11 @@ import ExamsPage from "./pages/Exams/ExamsPage";
 import HomeworkPage from "./pages/Homework/HomeworkPage";
 import SettingsPage from "./pages/Settings/SettingsPage";
 import Header from "./components/Header";
-import RegisterPage from "./pages/Register/RegisterPage";
 import {Box} from "@mui/material"
 import UseNavigation from "./hooks/UseNavigation";
 function App() {
 
-  const { navigate, currentPath } = UseNavigation(); //reach navigate function by using useContext
+  const { navigate, currentPath } = UseNavigation();
 
   return (
       <>
@@ -45,9 +44,6 @@ function App() {
           </Route>
           <Route path="/homework">
             <HomeworkPage />
-          </Route>
-            <Route path="/register">
-            <RegisterPage />
           </Route>
           <Route path="/settings">
             <SettingsPage />

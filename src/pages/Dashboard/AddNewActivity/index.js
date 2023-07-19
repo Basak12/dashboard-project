@@ -5,8 +5,8 @@ import ControlPointIcon from '@mui/icons-material/ControlPoint';
 
 const AddNewActivity = ({onAddNewActivity}) => {
     const [open, setOpen] = useState(false);
-    const [openingText, setOpeningText] = useState('');
-    const [releaseDate, setReleaseDate] = useState('');
+    const [activity, setActivity] = useState('');
+    const [deadline, setDeadline] = useState('');
 
     const handleOpen = () => {
         setOpen(true);
@@ -18,19 +18,19 @@ const AddNewActivity = ({onAddNewActivity}) => {
 
     function submitHandler() {
         const newEvent = {
-            openingText: openingText,
-            releaseDate: releaseDate,
+            activity: activity,
+            deadline: deadline,
             status: false,
         };
         onAddNewActivity(newEvent);
-        setOpeningText('');
-        setReleaseDate('');
+        setActivity('');
+        setDeadline('');
         setOpen(false);
     }
 
 
     return (
-        <div style={{paddingLeft: '20px'}}>
+        <div style={{paddingLeft: '10px'}}>
             <Button variant="contained" color="primary" onClick={handleOpen} endIcon = {<ControlPointIcon/>}>
                 Yeni Aktivite Ekle
             </Button>
@@ -40,17 +40,17 @@ const AddNewActivity = ({onAddNewActivity}) => {
                 <DialogContent>
                     <TextField
                         label="Aktivite"
-                        value={openingText}
-                        onChange={(e) => setOpeningText(e.target.value)}
+                        value={activity}
+                        onChange={(e) => setActivity(e.target.value)}
                         fullWidth
                         margin="normal"
                     />
 
                     <TextField
                         label="Harcanacak Gün Sayısı"
-                        value={releaseDate}
+                        value={deadline}
                         type= "number"
-                        onChange={(e) => setReleaseDate(e.target.value)}
+                        onChange={(e) => setDeadline(e.target.value)}
                         fullWidth
                         margin="normal"
                     />
